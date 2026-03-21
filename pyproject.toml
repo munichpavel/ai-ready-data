@@ -9,6 +9,8 @@ authors = [
 requires-python = "==3.10.*"  # hugging face space default
 dependencies = [
     "gradio>=6.9.0",
+    "lxml>=6.0.2",
+    "pdfminer-six>=20260107",
 ]
 
 [project.scripts]
@@ -17,3 +19,8 @@ ai-ready-data = "ai_ready_data:app"
 [build-system]
 requires = ["uv_build>=0.8.0,<0.9"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
