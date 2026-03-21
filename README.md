@@ -9,3 +9,10 @@ pinned: false
 ---
 
 # AI Ready Data
+
+
+## Local development
+
+```zsh
+uv run gradio app.py
+```
