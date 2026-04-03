@@ -25,3 +25,6 @@ build-backend = "uv_build"
 dev = [
     "pytest>=9.0.2",
 ]
+
+[tool.uv]
+exclude-newer = "1 week"
