@@ -1,0 +1,373 @@
+RAČUN
+
+DATUM OPRAVLJENE STORITVE:
+31.08.2025
+
+Obračun
+Petrol klub plačilna kartica
+Storitev
+Električna energija
+
+S tem računom ste pridobili Petrol Zlate točke: 73, veljajo do 31.01.2026
+
+Zapadli dolg
+Zapadle terjatve
+
+ROK PLAČILA:
+25.09.2025
+
+ZNESEK ZA PLAČILO:
+€
+
+Znes
+
+Znesek v EUR
+
+60,54
+Znesek
+13,32
+73,86
+
+Stopnja
+22 %
+
+Skupaj
+
+Osnova
+60,54
+Skupaj z DDV
+
+Skupaj
+
+ZNESEK ZA PLAČILO
+
+Račun poravnajte kot običajno - s skeniranjem QR
+
+kode ali v UPN obrazec prepišite podatke za plačilo:
+
+Koda namena:
+
+Namen plačila:
+
+IBAN prejemnika:
+
+Referenca prejemnika:
+
+Plačilo računa
+
+OTHR
+
+        
+2333 B  D BR VA
+2591 B  H RJUL
+2591 B  H RJUL
+936 B  DUL A  - JU
+2328 B  LJUBLJANA - TIV L K
+8808 E H P - MAL PR DAJA - 20. obrok od 24
+8808 E H P - MAL PR DAJA - 13. obrok od 24
+8808 E H P - MAL PR DAJA - 2. obrok od 24
+
+PLAČILNA KARTICA
+
+Obračunsko obdobje: 01.08.2025 - 31.08.2025
+
+UPORABNIK KARTICE:
+
+06.08.2025 732480
+20.08.2025 411819
+25.08.
+26.08.
+28.08.
+14.01.
+18.08.
+31.07.
+kupaj
+
+Vrednost obračuna:
+
+ELEKTRIČNA ENERGIJA
+
+Naziv/Naslov merilnega mesta: 
+Št. merilnega mesta
+GSRN MT: 
+Št. števca:
+Elektrooperater: Elektro L ubl ana
+Št. pogodbe o dobavi: 
+Paket/produkt: Redni cenik
+
+PODATKI O PORABI ELEKTRIČNE ENERGIJE 
+Izvor odčitka
+Št.števca
+Daljinsko odčitavanje
+36754361
+Daljinsko odčitavanje
+36754361
+Skupna poraba energije v obdobju (kWh)
+Povprečna dnevna poraba tekočega obračunskega obdobja (kWh)
+Povprečna dnevna poraba predhodnega obračunskega obdobja (kWh)
+Procent rasti povprečne dnevne porabe (%)
+Povprečna dnevna poraba referenčnega odjemalca v RS za preteklo obračunsko obdobje (kWh)
+
+Vrsta porabe
+ENERGIJA VT
+ENERGIJA MT
+
+Datum do
+
+Datum od
+01.08.2025 01.09.2025
+01.08.2025 01.09.2025
+
+VT: 5,903
+
+OBDOBJE OD-DO
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+
+OBRAČUN PORABLJENE ELEKTRIČNE ENERGIJE
+Storitev
+Energija VT
+Energija MT
+Energija skupaj
+Dogovorjena obrač. moč ČB2
+Dogovorjena obrač. moč ČB3
+Dogovorjena obrač. moč ČB4
+Dogovorjena obrač. moč ČB5
+Prevzeta energija ČB2
+Prevzeta energija ČB3
+Prevzeta energija ČB4
+Prevzeta energija ČB5
+Uporaba omrežja skupaj
+Prispevek za delo. oper. trga
+Prispevek OVE in SPTE
+Prispevek za ener.učinkovitost
+Trošarina 1. stopnja
+Prispevki in druge dajatve
+Mesečno nadomestilo
+Dodatne storitve skupaj
+Skupaj obračunano brez DDV
+
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+01.08.2025-31.08.2025
+
+01.08.2025-31.08.2025
+
+DNI KOLIČINA ENOTA
+31 
+31 
+
+kWh
+kWh
+
+183
+177
+
+31 
+31 
+31 
+31 
+31 
+31 
+31 
+31 
+
+31 
+31 
+31 
+31 
+
+kW
+kW
+kW
+kW
+kWh
+kWh
+kWh
+kWh
+
+kWh
+kW
+kWh
+kWh
+
+4,6
+4,6
+4,6
+4,6
+128
+105
+91
+36
+
+360
+4,6
+360
+360
+
+1
+
+U orabniška sku ina: 0
+
+SN izvod
+
+Priključna shema: 
+Priključna moč: 17 kW (3X25 A)
+Način določitve obračunskih količin: M1-1
+Vrsta odjema: Gospodinjski odjem
+
+Začetno stanje Končno stanje
+15.242 
+13.947 
+
+15.059 
+13.770 
+
+Razlika
+183
+177
+
+MT: 5,710
+
+ET/Skupaj
+
+kWh/kW/kVArh
+183
+177
+360
+11,613
+12,613
+-7,929
+10,322
+
+Faktor
+
+CENA DDV %
+0,12795   22,00 
+0,10795   22,00 
+
+0,91224   22,00 
+0,16297   22,00 
+0,00407   22,00 
+0,00000   22,00 
+0,01833   22,00 
+0,01809   22,00 
+0,01855   22,00 
+0,01873   22,00 
+
+0,00013   22,00 
+0,77562   22,00 
+0,00080   22,00 
+0,00153   22,00 
+
+1,98000   22,00 
+
+ZNESEK BREZ DDV
+23,41
+19,11
+42,52
+4,20
+0,75
+0,02
+0,00
+2,35
+1,90
+1,69
+0,67
+11,58
+0,05
+3,57
+0,29
+0,55
+4,46
+1,98
+1,98
+60,54
+
+Dogovorjena obračunska moč merilnega mesta 
+blok 4: 4.6 kW in časovni blok 5: 4.6 kW. Dogovor eno mo  lahko spremenite preko portala Moj elektro https://mojelektro.si/ ali pisno, po navadni ali
+elektronski pošti, na naslov omreznina@elektro-ljubljana.si z začetkom veljavnosti v naslednjem koledarskem mesecu, če zahtevo za spremembo
+oddate do vključno 15. dne v mesecu.
+
+za leto 2026: časovni blok 1: 4.6 kW, časovni blok 2: 4.6 kW, časovni blok 3: 4.6 kW, časovni
+
+OBVESTILO O PODALJŠANJU AKCIJSKE PONUDBE DO 30. 11. 2025
+Obveščamo vas, da smo veljavnost akcijske ponudbe podaljšali še za dodatne 3 mesece. K akcijski ponudbi lahko pristopite  do vključno 30. 11. 2025.  
+Vabimo vas, da izkoristite priložnost in si znižate stroške že danes. Akcijsko ceno lahko vklopite kar preko spleta, v nekaj klikih:
+https://www.petrol.si/za-dom/energenti/elektricna-energija/sklenitev-pogodbe-elektrika
+Za dodatne informacije nas lahko kontaktirate preko e-pošte na naslov podpora.strankam@petrol.si ali pa nas pokličete na brezplačno številko  080 22 66. 
+
+Vpis v sodni register: Okrožno sodišče v Ljubljani, Matična številka: 5025796000, Osnovni kapital: 52.240.977,04 EUR
+
+ 2 od 3
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Kontaktni podatki elektrooperaterjev
+Elektro Ljubljana, d.d., Kotnikova ulica 9, 1516 Ljubljana, info@elektro-ljubljana.si, 01 230 40 03,  prijava okvar 24/7: 01 23 04 002
+
+OPOMIN ZA ZAPADLI DOLG  NA DAN 05.09.2025
+
+Vrsta dokumenta
+Izdani račun
+Izdani račun
+Izdani račun
+Izdani račun
+Skupaj
+
+Referenca
+311002028456
+311002028456
+311002028456
+311002028456
+
+Datum kniženja
+31.07.2025
+01.08.2023
+14.01.2024
+18.08.2024
+
+Datum zapadlosti
+25.08.2025
+25.08.2025
+25.08.2025
+25.08.2025
+
+Valuta
+EUR
+EUR
+EUR
+EUR
+EUR
+
+Znesek
+547,53
+34,16
+16,62
+40,58
+638,89
+
+Prosimo vas, da dolg poravnate po priloženem plačilnem nalogu do označenega roka plačila, sicer vam bomo prisiljeni USTAVITI PRODAJO BLAGA IN STORITEV. V primeru, da
+ste  zapadle  račune  že  poravnali,  ustrezno  zmanjšate  znesek  izdanega  plačilnega  naloga.  Za  več  informacij  smo  dosegljivi  na  telefonski  številki  080  22  66  ali  na  e-naslovu
+izterjava@petrol.si
+
+Vpis v sodni register: Okrožno sodišče v Ljubljani, Matična številka: 5025796000, Osnovni kapital: 52.240.977,04 EUR
+
+ 3 od 3
+
+
