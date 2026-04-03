@@ -1,4 +1,8 @@
+import sys
 import gradio as gr
+
+# Path hack to appease gradio builds and keep my src/
+sys.path.insert(0, 'src')
 
 from ai_ready_data.parse import parse
 from ai_ready_data.constants import DataManagementMode
