@@ -1,10 +1,11 @@
 import gradio as gr
 
-from ai_ready_data.parse import Mode, parse
+from ai_ready_data.parse import parse
+from ai_ready_data.constants import DataManagementMode
 
 
 def run_pipeline(mode: str) -> str:
-    parse(mode=Mode[mode])
+    parse(mode=DataManagementMode[mode])
     return f"Pipeline complete (mode: {mode})"
 
 
@@ -13,13 +14,13 @@ def search(query: str) -> str:
     return f"Search not yet implemented (query: {query!r})"
 
 
-mode_choices = [m.value for m in Mode]
+mode_choices = [m.value for m in DataManagementMode]
 
 with gr.Blocks() as demo:
     gr.Markdown("## AI-Ready Data")
 
     with gr.Tab("Process"):
-        mode_dropdown = gr.Dropdown(choices=mode_choices, value=mode_choices[0], label="Mode")
+        mode_dropdown = gr.Dropdown(choices=mode_choices, value=mode_choices[0], label="DataManagementMode")
         run_button = gr.Button("Run pipeline")
         pipeline_output = gr.Textbox(label="Output", interactive=False)
         run_button.click(fn=run_pipeline, inputs=mode_dropdown, outputs=pipeline_output)

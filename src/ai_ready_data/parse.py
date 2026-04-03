@@ -8,28 +8,29 @@ from pdfminer.high_level import extract_text
 
 log = structlog.get_logger()
 
-DATA_ROOT = Path(__file__).parents[2] / 'data'
-RAW_DATA_ROOT = DATA_ROOT / 'raw'
-TARGET_DIR = DATA_ROOT / 'parsed' / 'plain'
+class DataManagementMode(Enum):
+    basic = 'basic'
+
+DATA_ROOTS = {
+    DataManagementMode.basic: Path(__file__).parents[2] / 'data-1'
+}
+RAW_DATA_DIRS = {mode: path / 'raw' for mode, path in DATA_ROOTS.items()}
+TARGET_DIRS = {mode: path / 'parsed' for mode, path in DATA_ROOTS.items()}
 
 
 RAW_SUBDIR_NAMES = ['internal', 'personally-identifiable', 'public']
 
 
-class Mode(Enum):
-    plain = 'plain'
-
-
-def parse(mode: Mode) -> None:
+def parse(mode: DataManagementMode) -> None:
     log.info(f"Parsing in {mode} mode")
-    if mode == Mode.plain:
-        plain_parse()
+    if mode == DataManagementMode.basic:
+        basic_parse()
 
 
-def plain_parse() -> None:
-    TARGET_DIR.mkdir(exist_ok=True, parents=True)
+def basic_parse() -> None:
+    TARGET_DIRS[DataManagementMode.basic].mkdir(exist_ok=True, parents=True)
     for subdir_name in RAW_SUBDIR_NAMES:
-        subdir = RAW_DATA_ROOT / subdir_name
+        subdir = RAW_DATA_DIRS[DataManagementMode.basic] / subdir_name
 
         for raw_path in subdir.iterdir():
             target_filename = raw_path.stem + '.txt'
@@ -37,7 +38,7 @@ def plain_parse() -> None:
                 log.info("Plain pdf parsing")
                 text = parse_pdf_to_text(source_path=raw_path)
 
-                with open(TARGET_DIR / target_filename, 'w') as fp:
+                with open(TARGET_DIRS[DataManagementMode.basic] / target_filename, 'w') as fp:
                     fp.write(text)
             else:
                 log.warn(f"Parsing of {raw_path.suffix} not yet supported")
@@ -52,9 +53,9 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', type=str, help="Mode of parsing")
+    parser.add_argument('--mode', type=str, help="DataManagementMode of parsing")
     args = parser.parse_args()
 
-    mode = Mode[args.mode]
+    mode = DataManagementMode[args.mode]
 
     parse(mode=mode)
