@@ -16,8 +16,8 @@ def run_pipeline(mode: str) -> str:
     return f"Pipeline complete (mode: {mode})"
 
 
-def ask(query: str, answering_mode: str) -> str:
-    return get_answer(query, RETRIEVERS[answering_mode])
+async def ask(query: str, answering_mode: str) -> str:
+    return await get_answer(query, RETRIEVERS[answering_mode])
 
 
 mode_choices = [m.value for m in DataManagementMode]
@@ -40,8 +40,15 @@ with gr.Blocks() as demo:
 
     gr.Markdown("### 2. Ask a question")
     answering_mode_radio = gr.Radio(choices=answering_modes, value="no data", label="Data made available to LLM")
-    ask_input = gr.Textbox(label="Query")
+    ask_input = gr.Textbox(label="Query (responses can take ~20s)")
+    gr.Examples(
+        examples=[
+            ["How many Petrol points did I earn in August?"],
+        ],
+        inputs=ask_input
+    )
     ask_button = gr.Button("Ask")
+
     ask_output = gr.Textbox(label="Answer", interactive=False)
     ask_button.click(fn=ask, inputs=[ask_input, answering_mode_radio], outputs=ask_output)
 

@@ -19,13 +19,13 @@ session_service = InMemorySessionService()
 runner = Runner(agent=agent, app_name="ai_ready_data", session_service=session_service)
 
 
-def get_answer(query: str, retriever: Retriever) -> str:
+async def get_answer(query: str, retriever: Retriever) -> str:
     context = retriever(query)
     text = f"Context:\n{context}\n\nQuestion: {query}" if context else query
-    session = session_service.create_session_sync(app_name="ai_ready_data", user_id="user")
+    session = await session_service.create_session(app_name="ai_ready_data", user_id="user")
     message = types.Content(role="user", parts=[types.Part(text=text)])
 
-    for event in runner.run(user_id="user", session_id=session.id, new_message=message):
+    async for event in runner.run_async(user_id="user", session_id=session.id, new_message=message):
         if event.is_final_response():
             return event.content.parts[0].text
 
