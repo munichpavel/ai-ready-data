@@ -8,10 +8,10 @@ logging.basicConfig(level=logging.INFO)
 # Path hack to appease gradio builds and keep src/ layout
 sys.path.insert(0, 'src')
 
-from ai_ready_data.parse import parse
-from ai_ready_data.constants import DataManagementMode
-from ai_ready_data.answer import get_answer
-from ai_ready_data.retriever import null_retriever, make_full_context_retriever
+from ai_ready_data.parse import parse  # noqa: E402
+from ai_ready_data.constants import DataManagementMode  # noqa: E402
+from ai_ready_data.answer import get_answer  # noqa: E402
+from ai_ready_data.retriever import null_retriever, make_vector_retriever  # noqa: E402
 
 
 def run_pipeline(mode: str) -> str:
@@ -28,8 +28,8 @@ answering_modes = ["no data", "basic", "advanced"]
 
 RETRIEVERS = {
     "no data": null_retriever,
-    "basic": make_full_context_retriever(Path("data-1/parsed/")),
-    "advanced": null_retriever,  # placeholder
+    "basic": make_vector_retriever(Path("data-1/parsed/")),
+    "advanced": null_retriever,
 }
 
 with gr.Blocks() as demo:
