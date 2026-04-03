@@ -1,22 +1,13 @@
-from enum import Enum
 from pathlib import Path
 
 import structlog
 
 from pdfminer.high_level import extract_text
 
+from .constants import DataManagementMode, RAW_DATA_DIRS, TARGET_DIRS
+
 
 log = structlog.get_logger()
-
-class DataManagementMode(Enum):
-    basic = 'basic'
-
-DATA_ROOTS = {
-    DataManagementMode.basic: Path(__file__).parents[2] / 'data-1'
-}
-RAW_DATA_DIRS = {mode: path / 'raw' for mode, path in DATA_ROOTS.items()}
-TARGET_DIRS = {mode: path / 'parsed' for mode, path in DATA_ROOTS.items()}
-
 
 RAW_SUBDIR_NAMES = ['internal', 'personally-identifiable', 'public']
 
@@ -32,14 +23,26 @@ def basic_parse() -> None:
     for subdir_name in RAW_SUBDIR_NAMES:
         subdir = RAW_DATA_DIRS[DataManagementMode.basic] / subdir_name
 
+        if not subdir.exists():
+            log.warn(f"Subdir {subdir} does not exist, skipping")
+            continue
         for raw_path in subdir.iterdir():
-            target_filename = raw_path.stem + '.txt'
+            log.info(f"Trying to parse {raw_path}")
+
             if raw_path.suffix == ".pdf":
-                log.info("Plain pdf parsing")
+                target_filename = raw_path.stem + '.txt'
+                log.info("Basic pdf parsing")
                 text = parse_pdf_to_text(source_path=raw_path)
 
                 with open(TARGET_DIRS[DataManagementMode.basic] / target_filename, 'w') as fp:
                     fp.write(text)
+            elif raw_path.suffix == ".csv" or raw_path.suffix == ".html":
+                target_filename = raw_path.stem + raw_path.suffix
+                log.info("Basic csv parsing")
+                with open(raw_path) as fp:
+                    csv_text = fp.read()
+                with open(TARGET_DIRS[DataManagementMode.basic] / target_filename, 'w') as fp:
+                    fp.write(csv_text)
             else:
                 log.warn(f"Parsing of {raw_path.suffix} not yet supported")
 

@@ -1,6 +1,9 @@
+import logging
 import sys
 from pathlib import Path
 import gradio as gr
+
+logging.basicConfig(level=logging.INFO)
 
 # Path hack to appease gradio builds and keep src/ layout
 sys.path.insert(0, 'src')
