@@ -10,5 +10,8 @@ def null_retriever(query: str) -> str:
 
 def make_full_context_retriever(parsed_dir: Path) -> Retriever:
     def retrieve(query: str) -> str:
-        return "\n\n".join(p.read_text() for p in parsed_dir.glob("*.txt"))
+        docs = []
+        docs += [p.read_text() for p in parsed_dir.glob("*.txt")]
+        docs += [p.read_text() for p in parsed_dir.glob("*.csv")]
+        return "\n\n".join(docs)
     return retrieve
