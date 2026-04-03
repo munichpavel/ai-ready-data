@@ -6,6 +6,8 @@ from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai import types
 
+from .retriever import Retriever
+
 model = LiteLlm(
     model="huggingface/Qwen/Qwen2.5-72B-Instruct",
     api_key=os.environ["HF_TOKEN"]
@@ -17,9 +19,11 @@ session_service = InMemorySessionService()
 runner = Runner(agent=agent, app_name="ai_ready_data", session_service=session_service)
 
 
-def get_answer(query: str) -> str:
+def get_answer(query: str, retriever: Retriever) -> str:
+    context = retriever(query)
+    text = f"Context:\n{context}\n\nQuestion: {query}" if context else query
     session = session_service.create_session_sync(app_name="ai_ready_data", user_id="user")
-    message = types.Content(role="user", parts=[types.Part(text=query)])
+    message = types.Content(role="user", parts=[types.Part(text=text)])
 
     for event in runner.run(user_id="user", session_id=session.id, new_message=message):
         if event.is_final_response():
