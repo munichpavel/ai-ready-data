@@ -98,10 +98,10 @@ def enhance_measurement_semantics(df: pl.DataFrame) -> pl.DataFrame:
 
 
 if __name__ == '__main__':
-    import os
 
-    DATA_ROOT = Path(os.environ['DATA_DIR'])
-    SEED_DIR = DATA_ROOT / '_seed'
+    from .constants import DATA_ROOTS, RAW_DATA_DIRS, DataManagementMode
+
+    SEED_DIR = DATA_ROOTS[DataManagementMode.basic] / '_seed'
 
     seed_paths = {
         'measurements': SEED_DIR / 'measurements-2025-09_10_11.json'
@@ -111,13 +111,11 @@ if __name__ == '__main__':
     measurement_data = transform_measurements(seed_data=seed_measurement_data)
 
     obscured_measurements_df = obscure_measurement_semantics(df=measurement_data.values)
-    TARGET_ROOT_1 = DATA_ROOT / 'raw_1'
+    TARGET_ROOT_1 = RAW_DATA_DIRS[DataManagementMode.basic]
     TARGET_ROOT_1.mkdir(exist_ok=True, parents=True)
     obscured_measurements_df.write_csv(TARGET_ROOT_1 / 'internal' / 'measurements.csv')
 
     enhanced_measurements_df = enhance_measurement_semantics(df=measurement_data.values)
-    TARGET_ROOT_2 = DATA_ROOT / 'raw_2'
+    TARGET_ROOT_2 = RAW_DATA_DIRS[DataManagementMode.advanced]
     TARGET_ROOT_2.mkdir(exist_ok=True, parents=True)
     enhanced_measurements_df.write_csv(TARGET_ROOT_2 / 'internal' / 'measurements.csv')
-
-
