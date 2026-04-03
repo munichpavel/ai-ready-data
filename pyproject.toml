@@ -13,6 +13,8 @@ dependencies = [
     "pdfminer-six>=20260107",
     "polars>=1.39.3",
     "structlog>=25.5.0",
+    "litellm>=1.75.5",
+    "google-adk>=1.28.0",
 ]
 
 [project.scripts]
@@ -30,3 +32,4 @@ dev = [
 
 [tool.uv]
 exclude-newer = "1 week"
+constraint-dependencies = ["litellm>=1.75.5,<=1.82.6"]
