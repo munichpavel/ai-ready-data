@@ -1,4 +1,5 @@
 import sys
+from pathlib import Path
 import gradio as gr
 
 # Path hack to appease gradio builds and keep src/ layout
@@ -7,6 +8,7 @@ sys.path.insert(0, 'src')
 from ai_ready_data.parse import parse
 from ai_ready_data.constants import DataManagementMode
 from ai_ready_data.answer import get_answer
+from ai_ready_data.retriever import null_retriever, make_full_context_retriever
 
 
 def run_pipeline(mode: str) -> str:
@@ -15,12 +17,17 @@ def run_pipeline(mode: str) -> str:
 
 
 def ask(query: str, answering_mode: str) -> str:
-    answer = get_answer(query)
-    return answer
+    return get_answer(query, RETRIEVERS[answering_mode])
 
 
 mode_choices = [m.value for m in DataManagementMode]
 answering_modes = ["no data", "basic", "advanced"]
+
+RETRIEVERS = {
+    "no data": null_retriever,
+    "basic": make_full_context_retriever(Path("data-1/parsed/")),
+    "advanced": null_retriever,  # placeholder
+}
 
 with gr.Blocks() as demo:
     gr.Markdown("## AI-Ready Data")
