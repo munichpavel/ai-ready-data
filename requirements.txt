@@ -476,7 +476,7 @@ pandas==2.3.3
     # via gradio
 pdfminer-six==20260107
     # via ai-ready-data
-pillow==12.1.1
+pillow==12.2.0
     # via gradio
 polars==1.39.3
     # via ai-ready-data
