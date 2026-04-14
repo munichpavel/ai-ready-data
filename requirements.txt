@@ -106,7 +106,7 @@ fsspec==2026.2.0
     #   gradio-client
     #   huggingface-hub
     #   torch
-google-adk==1.28.0
+google-adk==1.28.1
     # via ai-ready-data
 google-api-core==2.30.0
     # via
