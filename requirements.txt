@@ -571,7 +571,7 @@ python-dotenv==1.2.2
     #   google-adk
     #   litellm
     #   pydantic-settings
-python-multipart==0.0.22
+python-multipart==0.0.26
     # via
     #   gradio
     #   mcp
