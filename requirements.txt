@@ -334,7 +334,7 @@ litellm==1.82.6
     # via ai-ready-data
 lxml==6.0.2
     # via ai-ready-data
-mako==1.3.10
+mako==1.3.11
     # via alembic
 markdown-it-py==4.0.0
     # via rich
