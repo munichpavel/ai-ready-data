@@ -555,7 +555,7 @@ pydub==0.25.1
     # via gradio
 pygments==2.19.2
     # via rich
-pyjwt==2.12.1
+pyjwt==2.13.0
     # via mcp
 pyopenssl==26.0.0
     # via google-auth
